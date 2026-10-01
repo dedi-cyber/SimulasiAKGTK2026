@@ -18,7 +18,7 @@
                             200: '#a7f3d0',
                             300: '#6ee7b7',
                             400: '#34d399',
-                            50: '#10b981',
+                            500: '#10b981',
                             600: '#059669',
                             700: '#047857',
                             800: '#065f46',
@@ -80,13 +80,13 @@
     <div id="root"></div>
 
     <script type="text/babel">
-        // SOAL DATASET DARI FILE-FILE AKGTK 2026 - RUMPUN PENGAWAS MADRASAH
+        // SOAL DATASET LENGKAP - AKGTK 2026 RUMPUN PENGAWAS MADRASAH
         const QUESTION_BANK = {
             supervisi_akademik: {
                 id: 'supervisi_akademik',
                 title: 'Supervisi Akademik',
                 icon: 'fa-chalkboard-user',
-                badge: '40 Soal Pilihan',
+                badge: '15 Soal Utama',
                 desc: 'Fokus pada pembinaan kualitatif proses dan hasil pembelajaran guru madrasah.',
                 questions: [
                     {
@@ -99,7 +99,7 @@
                             'Menyusun laporan keuangan madrasah',
                             'Meningkatkan kualitas proses dan hasil pembelajaran secara berkelanjutan'
                         ],
-                        key: 4, // Index E
+                        key: 4,
                         explanation: 'Fungsi utama supervisi akademik pengawas adalah membantu guru meningkatkan kualitas proses dan hasil pembelajaran secara berkelanjutan, melalui pembinaan profesional yang suportif bukan sekadar penilaian administratif.'
                     },
                     {
@@ -218,6 +218,71 @@
                         ],
                         key: 4,
                         explanation: 'Pertemuan pra-observasi dilakukan pengawas dan guru sebelum observasi kelas untuk menyepakati fokus dan aspek yang akan diamati, memastikan proses supervisi terarah dan disepakati bersama.'
+                    },
+                    {
+                        id: 'sa11',
+                        question: 'Siklus supervisi klinis yang ideal terdiri atas tiga tahapan utama secara berurutan, yaitu...',
+                        options: [
+                            'Evaluasi sumatif, penjatuhan sanksi, dan pelaporan',
+                            'Pertemuan awal (pra-observasi), observasi kelas, dan pertemuan balikan (pasca-observasi)',
+                            'Pemeriksaan RPP, wawancara kepala sekolah, dan sidak',
+                            'Penilaian portofolio, tes tertulis guru, dan rapat pleno',
+                            'Pengisian angket, rekapitulasi nilai, dan penyerahan sertifikat'
+                        ],
+                        key: 1,
+                        explanation: 'Supervisi klinis dilaksanakan melalui tiga tahapan sistematis: (1) Pertemuan pra-observasi untuk menyepakati fokus, (2) Observasi kelas untuk mengumpulkan data riil, dan (3) Pertemuan pasca-observasi untuk refleksi dan analisis bersama.'
+                    },
+                    {
+                        id: 'sa12',
+                        question: 'Pengawas menemukan sebagian besar guru di madrasah binaan belum memanfaatkan media digital berbasis AI secara bijak dalam pembelajaran. Tindakan supervisi akademik yang paling responsif dan berorientasi masa depan adalah...',
+                        options: [
+                            'Melarang penggunaan AI dalam pembelajaran secara total',
+                            'Membiarkan guru mengeksplorasi sendiri tanpa panduan',
+                            'Menyelenggarakan workshop berbasis praktik langsung (hands-on) tentang integrasi AI yang etis dan efektif dalam pembelajaran',
+                            'Memberikan teguran tertulis kepada guru yang belum menggunakan AI',
+                            'Mewajibkan guru membeli aplikasi AI berbayar'
+                        ],
+                        key: 2,
+                        explanation: 'Pengawas yang responsif akan memfasilitasi peningkatan kompetensi digital guru melalui pelatihan berbasis praktik langsung (hands-on) mengenai pemanfaatan AI secara etis dan efisien untuk mendukung pembelajaran.'
+                    },
+                    {
+                        id: 'sa13',
+                        question: 'Prinsip supervisi akademik yang menekankan bahwa hubungan antara pengawas dan guru hendaknya bersifat mitra sejawat, saling menghargai, dan terbuka disebut prinsip...',
+                        options: [
+                            'Otoritatif',
+                            'Kemitraan (Kolaboratif)',
+                            'Inspeksi',
+                            'Hierarkis vertikal',
+                            'Birokratis'
+                        ],
+                        key: 1,
+                        explanation: 'Prinsip kemitraan/kolaboratif menempatkan pengawas dan guru sebagai rekan sejawat yang sepadan dalam memecahkan masalah pembelajaran, menciptakan suasana terbuka dan bebas dari kepatuhan yang dipaksakan.'
+                    },
+                    {
+                        id: 'sa14',
+                        question: 'Saat memberikan umpan balik (feedback) pada sesi pasca-observasi, pengawas hendaknya menerapkan teknik balikan yang konstruktif dengan cara...',
+                        options: [
+                            'Langsung mengkritik semua kekecewaan pengawas di depan umum',
+                            'Mengajukan pertanyaan reflektif agar guru menyadari sendiri kekuatan dan area perbaikan pembelajarannya',
+                            'Menilai guru hanya berdasarkan hasil ujian siswa',
+                            'Membandingkan kinerja guru tersebut dengan guru favorit pengawas',
+                            'Memberikan pujian tanpa menyebutkan catatan perbaikan'
+                        ],
+                        key: 1,
+                        explanation: 'Umpan balik efektif diberikan dengan teknik pertanyaan reflektif yang mendorong kesadaran internal (self-awareness) guru, sehingga perbaikan timbul dari pemahaman guru sendiri bukan sekadar instruksi pengawas.'
+                    },
+                    {
+                        id: 'sa15',
+                        question: 'Pengawas menyusun instrumen rubrik khusus untuk menilai penerapan pembelajaran diferensiasi (konten, proses, produk) dalam modul ajar guru. Hal ini merupakan upaya pengawas dalam menjamin...',
+                        options: [
+                            'Validitas dan objektivitas penilaian perangkat pembelajaran',
+                            'Kemudahan pengisian nilai secara acak',
+                            'Penghematan waktu pembinaan',
+                            'Kepatuhan guru pada sistem poin administratif',
+                            'Kesetaraan gaji guru antar madrasah'
+                        ],
+                        key: 0,
+                        explanation: 'Penggunaan rubrik terstruktur berindikator spesifik menjamin validitas dan objektivitas instrumen supervisi, sehingga aspek diferensiasi dinilai berdasarkan bukti terukur.'
                     }
                 ]
             },
@@ -225,7 +290,7 @@
                 id: 'supervisi_manajerial',
                 title: 'Supervisi Manajerial',
                 icon: 'fa-sitemap',
-                badge: '40 Soal Pilihan',
+                badge: '15 Soal Utama',
                 desc: 'Fokus pada tata kelola, manajemen sumber daya, KOSP, RKAM, dan kepemimpinan madrasah.',
                 questions: [
                     {
@@ -357,6 +422,71 @@
                         ],
                         key: 1,
                         explanation: 'Sistem informasi manajemen digital terintegrasi meningkatkan efisiensi, akurasi, dan transparansi pengelolaan data, memudahkan keputusan berbasis data.'
+                    },
+                    {
+                        id: 'sm11',
+                        question: 'Dalam memfasilitasi penyusunan Kurikulum Operasional Satuan Pendidikan (KOSP) di madrasah binaan, fokus pengawasan manajerial adalah memastikan KOSP...',
+                        options: [
+                            'Sama persis dengan KOSP madrasah percontohan tanpa perubahan',
+                            'Memuat karakteristik khas madrasah, fleksibel, serta berbasis analisis kebutuhan konteks lokal peserta didik',
+                            'Disusun hanya oleh pengawas tanpa melibatkan tim madrasah',
+                            'Mengabaikan panduan Kementerian Agama RI',
+                            'Hanya memuat daftar mata pelajaran wajib tanpa visi-misi'
+                        ],
+                        key: 1,
+                        explanation: 'KOSP yang kontekstual dan akuntabel wajib mencerminkan karakteristik unik madrasah, potensi daerah, serta analisis kebutuhan kontekstual siswa, bukan jiplakan dokumen sekolah lain.'
+                    },
+                    {
+                        id: 'sm12',
+                        question: 'Pengawas menemukan adanya ketimpangan alokasi belanja operasional dan pengembangan mutu guru pada dokumen RKAM. Tindakan manajerial pengawas yang paling akuntabel adalah...',
+                        options: [
+                            'Membiarkan RKAM disetujui apa adanya',
+                            'Mendampingi Tim Pengembang Madrasah untuk merevisi alokasi anggaran berbasis skala prioritas rekomendasi EDM',
+                            'Menghapus seluruh alokasi belanja operasional',
+                            'Mengambil alih kewenangan penggunaan dana BOS/BOP',
+                            'Menolak memberikan persetujuan tanpa memberikan arahan perbaikan'
+                        ],
+                        key: 1,
+                        explanation: 'Pengawas membimbing Tim Pengembang Madrasah untuk melakukan re-alokasi anggaran dalam RKAM agar selaras dengan skala prioritas perbaikan mutu hasil EDM (Evaluasi Diri Madrasah).'
+                    },
+                    {
+                        id: 'sm13',
+                        question: 'Penilaian Kinerja Kepala Madrasah (PKKM) tahunan yang dilaksanakan pengawas mencakup empat komponen utama kepemimpinan, yaitu...',
+                        options: [
+                            'Absensi, kerajinan, penampilan, dan kerapian berkas',
+                            'Usaha pengembangan madrasah, pelaksanaan tugas manajerial, pengembangan kewirausahaan, dan supervisi kepada guru/tendik',
+                            'Jumlah lulusan, jumlah piala, luas lahan, dan anggaran BOS',
+                            'Keterlibatan organisasi, IPK, kualifikasi ijazah, dan lama menjabat',
+                            'Penguasaan IT, bahasa asing, jumlah buku karangan, dan reputasi'
+                        ],
+                        key: 1,
+                        explanation: 'Sesuai Juknis Kemenag, komponen PKKM mencakup 4 bidang utama: (1) Usaha Pengembangan Madrasah, (2) Pelaksanaan Tugas Manajerial, (3) Pengembangan Kewirausahaan, dan (4) Supervisi kepada Guru dan Tendik.'
+                    },
+                    {
+                        id: 'sm14',
+                        question: 'Ketika salah satu madrasah binaan mengalami konflik internal antara kepala madrasah dan dewan guru yang mengganggu stabilitas iklim kerja, peran manajerial pengawas yang paling krusial adalah...',
+                        options: [
+                            'Memihak kepada salah satu pihak yang lebih senior',
+                            'Bertindak sebagai mediator netral dan fasilitator untuk memusyawarahkan solusi berbasis aturan dan maslahat pembelajaran',
+                            'Menyerahkan konflik tersebut sepenuhnya kepada masyarakat',
+                            'Mengusulkan penutupan madrasah ke kantor Kemenag',
+                            'Mengabaikan masalah hingga konflik selesai sendiri'
+                        ],
+                        key: 1,
+                        explanation: 'Peran pengawas dalam manajemen konflik adalah mediator profesional yang netral, memfasilitasi dialog konstruktif berbasis aturan regulasi untuk menjaga kondusivitas iklim belajar.'
+                    },
+                    {
+                        id: 'sm15',
+                        question: 'Guna memperkuat Sistem Penjaminan Mutu Internal (SPMI) madrasah, pengawas mengarahkan pembentukan Tim Penjaminan Mutu Madrasah (TPMM). Tugas strategis TPMM adalah...',
+                        options: [
+                            'Mengambil alih tugas mengajar guru yang berhalangan',
+                            'Mengelola dan mengoordinasikan perencanaan, pelaksanaan, serta evaluasi mutu secara berkelanjutan di internal madrasah',
+                            'Menangani kebersihan dan keamanan lingkungan madrasah',
+                            'Menggantikan peran Komite Madrasah dalam pencarian dana',
+                            'Menyusun jadwal pelajaran harian'
+                        ],
+                        key: 1,
+                        explanation: 'TPMM merupakan motor penggerak SPMI di tingkat satuan pendidikan yang bertugas mengoordinasikan siklus pemetaan mutu, perencanaan mutu, pelaksanaan mutu, hingga evaluasi internal.'
                     }
                 ]
             },
@@ -364,7 +494,7 @@
                 id: 'evaluasi_pendidikan',
                 title: 'Evaluasi Pendidikan',
                 icon: 'fa-chart-line',
-                badge: '40 Soal Pilihan',
+                badge: '15 Soal Utama',
                 desc: 'Fokus pada teknik asesmen, instrumen CIPP, evaluasi program, validitas-reliabilitas, dan analisis data AN/EMIS.',
                 questions: [
                     {
@@ -496,6 +626,71 @@
                         ],
                         key: 2,
                         explanation: 'Analisis longitudinal (berkelanjutan lintas tahun) memberikan gambaran tren perkembangan yang stabil dan objektif.'
+                    },
+                    {
+                        id: 'ep11',
+                        question: 'Pengawas menelaah Rapor Pendidikan madrasah dan menemukan indikator "Literasi dan Numerasi" berada di kategori merah. Langkah awal evaluasi program yang paling direkomendasikan adalah...',
+                        options: [
+                            'Menyalahkan guru mata pelajaran Bahasa dan Matematika',
+                            'Melakukan analisis akar masalah (root cause analysis) bersama Tim Pengembang Madrasah berbasis data Rapor Pendidikan',
+                            'Mengusulkan pergantian kepala madrasah',
+                            'Menghapus jam pelajaran ekstrakurikuler',
+                            'Mengabaikan data Rapor Pendidikan dan membuat tes sendiri'
+                        ],
+                        key: 1,
+                        explanation: 'Perencanaan berbasis data (PBD) menuntut analisis akar masalah terstruktur dari Rapor Pendidikan sebelum menyusun program perbaikan literasi-numerasi lintas mapel.'
+                    },
+                    {
+                        id: 'ep12',
+                        question: 'Dalam mengevaluasi ketersediaan dan pemanfaatan kualifikasi pendidik melalui EMIS/SIMPATIKA, pengawas berfokus pada indikator...',
+                        options: [
+                            'Kesesuaian latar belakang pendidikan (linieritas) guru dengan mata pelajaran yang diampu',
+                            'Jumlah rekening bank pribadi milik guru',
+                            'Jarak tempat tinggal guru ke madrasah',
+                            'Merek laptop yang digunakan guru',
+                            'Status pernikahan guru'
+                        ],
+                        key: 0,
+                        explanation: 'Linieritas kualifikasi akademik dengan mata pelajaran yang diampu merupakan indikator utama kesesuaian standar pendidik (PTK) dalam evaluasi manajerial-akademik.'
+                    },
+                    {
+                        id: 'ep13',
+                        question: 'Pada model Evaluasi CIPP (Stufflebeam), tahap penilaian kesiapan sumber daya manusia, kecukupan dana, dan kelayakan fasilitas sebelum pelaksanaan program dinamakan evaluasi...',
+                        options: [
+                            'Context (Konteks)',
+                            'Input (Masukan)',
+                            'Process (Proses)',
+                            'Product (Hasil/Produk)',
+                            'Outcome (Dampak)'
+                        ],
+                        key: 1,
+                        explanation: 'Evaluasi Input menilai ketersediaan dan kecukupan sumber daya (SDM, biaya, strategi, sarana) yang diperlukan untuk mencapai tujuan program sebelum program dijalankan.'
+                    },
+                    {
+                        id: 'ep14',
+                        question: 'Agar soal tes hasil belajar yang disusun guru memiliki Validitas Isi (Content Validity) yang tinggi, pembinaan pengawas diarahkan pada penyusunan...',
+                        options: [
+                            'Soal berbentuk pilihan ganda rumit tanpa acuan',
+                            'Kisi-kisi soal yang memetakan keselarasan antara Indikator Pencapaian Kompetensi (IPK), materi, dan level kognitif',
+                            'Kunci jawaban yang bervariasi',
+                            'Soal yang hanya dikutip dari buku paket lama',
+                            'Petunjuk teknis pengerjaan yang sangat panjang'
+                        ],
+                        key: 1,
+                        explanation: 'Validitas isi dijamin melalui penyusunan kisi-kisi soal (test blueprint) yang memastikan seluruh domain indikator dan ranah kognitif terwakili secara proporsional.'
+                    },
+                    {
+                        id: 'ep15',
+                        question: 'Analisis tingkat kesukaran dan daya pembeda butir soal asesmen yang dilakukan pengawas bertujuan untuk...',
+                        options: [
+                            'Meningkatkan persentase siswa yang lulus secara buatan',
+                            'Mengidentifikasi butir soal yang baik, perlu direvisi, atau dibuang sehingga diperoleh instrumen asesmen yang bermutu',
+                            'Menambah beban kerja guru dalam mengoreksi',
+                            'Memperlambat pengumuman nilai hasil belajar',
+                            'Memastikan soal hanya bisa dijawab siswa berprestasi tinggi'
+                        ],
+                        key: 1,
+                        explanation: 'Analisis kuantitatif butir soal (daya pembeda & kesukaran) berfungsi memilah butir soal yang mampu membedakan tingkat kemampuan siswa secara sahih dan efisien.'
                     }
                 ]
             },
@@ -503,7 +698,7 @@
                 id: 'penelitian_pengembangan',
                 title: 'Penelitian dan Pengembangan',
                 icon: 'fa-vial-circle-check',
-                badge: '40 Soal Pilihan',
+                badge: '15 Soal Utama',
                 desc: 'Fokus pada PTS (Penelitian Tindakan Sekolah), model R&D, publikasi ilmiah, dan karya inovatif pengawas.',
                 questions: [
                     {
@@ -621,7 +816,7 @@
                             'Menghentikan siklus pengembangan'
                         ],
                         key: 0,
-                        explanation: 'Uji coba terbatas pada R&D bertujuan untuk mengumpulkan umpan balik kualitatif dan kualitatif skala kecil untuk merevisi kelamahan awal sebelum skala besar.'
+                        explanation: 'Uji coba terbatas pada R&D bertujuan untuk mengumpulkan umpan balik kualitatif dan kualitatif skala kecil untuk merevisi kelemahan awal sebelum skala besar.'
                     },
                     {
                         id: 'pp10',
@@ -635,12 +830,77 @@
                         ],
                         key: 3,
                         explanation: 'Tahap Refleksi menganalisis pencapaian indikator keberhasilan dari hasil observasi, serta mengidentifikasi kelemahan untuk merancang tindakan perbaikan pada siklus berikutnya jika belum tuntas.'
+                    },
+                    {
+                        id: 'pp11',
+                        question: 'Perbedaan mendasar antara Penelitian Tindakan Kelas (PTK) guru dan Penelitian Tindakan Sekolah (PTS) pengawas terletak pada...',
+                        options: [
+                            'PTK tidak menggunakan siklus, sedangkan PTS menggunakan siklus',
+                            'Sasaran/subjek tindakan; PTK berfokus pada siswa/pembelajaran kelas, sedangkan PTS berfokus pada guru, kepala madrasah, atau sistem tata kelola',
+                            'PTS hanya boleh dilakukan oleh dosen, sedangkan PTK oleh guru',
+                            'PTK bertujuan menaikkan gaji, sedangkan PTS untuk promosi jabatan',
+                            'PTS tidak memerlukan instrumen observasi'
+                        ],
+                        key: 1,
+                        explanation: 'Fokus sasaran utama PTS adalah peningkatan kemampuan profesional guru atau kepala madrasah dalam skema manajerial/akademik, sedangkan PTK menyasar perbaikan proses belajar siswa di kelas.'
+                    },
+                    {
+                        id: 'pp12',
+                        question: 'Pada sistematika laporan PTS, uraian rincian alur siklus (Planning, Acting, Observing, Reflecting) beserta kriteria indikator keberhasilan disajikan pada...',
+                        options: [
+                            'Bab I Pendahuluan',
+                            'Bab II Kajian Pustaka',
+                            'Bab III Metode Penelitian / Prosedur Tindakan',
+                            'Bab IV Hasil Penelitian dan Pembahasan',
+                            'Bab V Penutup'
+                        ],
+                        key: 2,
+                        explanation: 'Bab III memuat desain penelitian, setting penelitian, variabel/tindakan, instrumen, serta rincian alur prosedur tiap siklus beserta indikator kriteria keberhasilannya.'
+                    },
+                    {
+                        id: 'pp13',
+                        question: 'Pengawas menyusun laporan Praktik Baik (Best Practice) kepengawasan. Agar karya tersebut memenuhi syarat penilaian Angka Kredit (PAK) pengawas, dokumen tersebut harus...',
+                        options: [
+                            'Cukup disimpan di laptop pribadi tanpa diseminasi',
+                            'Mendapat pengesahan pejabat berwenang, dilengkapi bukti fisik (lampiran), serta didiseminasikan dalam forum ilmiah resmi pengawas (Pokjawas)',
+                            'Ditulis dalam bahasa asing tanpa diterjemahkan',
+                            'Berjumlah minimal 500 halaman',
+                            'Diisi hanya dengan kumpulan foto tanpa narasi analisis'
+                        ],
+                        key: 1,
+                        explanation: 'Syarat keabsahan karya ilmiah/Best Practice PAK pengawas mewajibkan adanya pengesahan formal, kelengkapan berkas fisik bukti implementasi, serta berita acara diseminasi pada forum Pokjawas.'
+                    },
+                    {
+                        id: 'pp14',
+                        question: 'Dalam metode Penelitian Pengembangan (R&D) model ADDIE, tahapan di mana pengawas membuat rancangan awal instrumen dan kerangka modul sebelum diproduksi adalah tahap...',
+                        options: [
+                            'Analysis (Analisis)',
+                            'Design (Perancangan)',
+                            'Development (Pengembangan)',
+                            'Implementation (Implementasi)',
+                            'Evaluation (Evaluasi)'
+                        ],
+                        key: 1,
+                        explanation: 'Tahap Design berfokus pada penyusunan cetak biru (blueprint), pemetaan struktur, dan perancangan awal produk pendampingan sebelum memasuki tahap pembuatan fisik (Development).'
+                    },
+                    {
+                        id: 'pp15',
+                        question: 'Kriteria utama yang menentukan bahwa suatu Best Practice (Praktik Baik) kepengawasan layak dipublikasikan dan direplikasi oleh pengawas lain adalah...',
+                        options: [
+                            'Menggunakan istilah asing yang sulit dipahami',
+                            'Memiliki unsur kebaruan (novelty), terbukti efektif mengatasi masalah nyata kepengawasan, serta berpotensi direplikasi (replicable)',
+                            'Membutuhkan biaya operasional yang sangat mahal',
+                            'Disusun hanya dalam waktu satu hari',
+                            'Mengabaikan data kondisi riil sekolah binaan'
+                        ],
+                        key: 1,
+                        explanation: 'Ciri utama Best Practice yang berkualitas meliputi kepraktisan (pragmatic), adanya unsur kebaruan/inovasi (novelty), teruji secara empiris menyelesaikan masalah, serta dapat direplikasi di tempat lain.'
                     }
                 ]
             }
         };
 
-        // Audio Synthesizer (Web Audio API) for instant sound feedback
+        // Audio Synthesizer (Web Audio API) for sound feedback
         const playSound = (type) => {
             try {
                 const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -674,7 +934,7 @@
                     });
                 }
             } catch(e) {
-                // Audio Context fallback if blocked by browser policy
+                // Audio Context fallback
             }
         };
 
@@ -685,7 +945,7 @@
             const [userMadrasah, setUserMadrasah] = React.useState(() => localStorage.getItem('akgtk_user_madrasah') || '');
             const [isLoggedIn, setIsLoggedIn] = React.useState(() => !!localStorage.getItem('akgtk_user_name'));
 
-            // Navigation state: 'dashboard', 'practice', 'exam', 'catalog', 'certificate'
+            // Navigation state: 'dashboard', 'practice', 'exam', 'catalog'
             const [activeTab, setActiveTab] = React.useState('dashboard');
             const [selectedDomain, setSelectedDomain] = React.useState('supervisi_akademik');
             
@@ -693,12 +953,12 @@
             const [mode, setMode] = React.useState('practice'); // 'practice' or 'exam'
             const [currentIndex, setCurrentIndex] = React.useState(0);
             const [userAnswers, setUserAnswers] = React.useState({}); // { qId: optionIndex }
-            const [showExplanation, setShowExplanation] = React.useState({}); // { qId: boolean }
+            const [showExplanation, setShowExplanation] = React.useState({});
             const [bookmarks, setBookmarks] = React.useState(() => JSON.parse(localStorage.getItem('akgtk_bookmarks') || '[]'));
             const [history, setHistory] = React.useState(() => JSON.parse(localStorage.getItem('akgtk_history') || '[]'));
 
-            // Exam Timer State (in seconds)
-            const [timeLeft, setTimeLeft] = React.useState(30 * 60);
+            // Exam Timer State
+            const [timeLeft, setTimeLeft] = React.useState(25 * 60);
             const [isExamActive, setIsExamActive] = React.useState(false);
             const [examSubmitted, setExamSubmitted] = React.useState(false);
 
@@ -752,13 +1012,13 @@
                 setCurrentIndex(0);
                 setUserAnswers({});
                 setShowExplanation({});
-                setTimeLeft(25 * 60); // 25 Minutes for simulation
+                setTimeLeft(25 * 60);
                 setIsExamActive(true);
                 setExamSubmitted(false);
                 setActiveTab('exam');
             };
 
-            // Timer Effect for Exam Mode
+            // Timer Effect
             React.useEffect(() => {
                 let timer = null;
                 if (isExamActive && timeLeft > 0 && !examSubmitted) {
@@ -782,7 +1042,6 @@
                 setExamSubmitted(true);
                 playSound('complete');
 
-                // Calculate Score
                 const currentQuestions = QUESTION_BANK[selectedDomain].questions;
                 let correctCount = 0;
                 currentQuestions.forEach(q => {
@@ -793,7 +1052,6 @@
 
                 const finalScore = Math.round((correctCount / currentQuestions.length) * 100);
                 
-                // Record History
                 const record = {
                     id: Date.now(),
                     date: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
@@ -832,6 +1090,9 @@
                 return `${m < 10 ? '0' : ''}${m}:${s < 10 ? '0' : ''}${s}`;
             };
 
+            // Total soal di seluruh bank
+            const totalQuestionsInBank = Object.values(QUESTION_BANK).reduce((acc, curr) => acc + curr.questions.length, 0);
+
             if (!isLoggedIn) {
                 return (
                     <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-emerald-800 to-teal-950 flex items-center justify-center p-4">
@@ -843,7 +1104,7 @@
                                 <h1 className="text-2xl font-extrabold tracking-tight">Latihan AKGTK 2026</h1>
                                 <p className="text-emerald-200 text-sm mt-1">Rumpun Pengawas Madrasah (Kemenag)</p>
                                 <div className="mt-3 inline-block bg-emerald-600/60 px-3 py-1 rounded-full text-xs font-medium text-emerald-100 border border-emerald-400/30">
-                                    <i className="fa-regular fa-calendar-check mr-1.5"></i>Pelaksanaan: Online Non TAK
+                                    <i className="fa-regular fa-calendar-check mr-1.5"></i>Pelaksanaan Asesmen 2026
                                 </div>
                             </div>
                             
@@ -860,7 +1121,7 @@
                                             required
                                             value={userName}
                                             onChange={(e) => setUserName(e.target.value)}
-                                            placeholder="contoh: Dedi Efendi, S.Pd., M.PFis." 
+                                            placeholder="contoh: Dudung, S.Pd.." 
                                             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm transition outline-none"
                                         />
                                     </div>
@@ -874,7 +1135,7 @@
                                             type="text" 
                                             value={userNip}
                                             onChange={(e) => setUserNip(e.target.value)}
-                                            placeholder="19730924XXXXXXXXXX" 
+                                            placeholder="19850101XXXXXXXXXX" 
                                             className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm transition outline-none"
                                         />
                                     </div>
@@ -903,7 +1164,7 @@
                                 </button>
 
                                 <p className="text-center text-xs text-slate-400 mt-4">
-                                    <i className="fa-solid fa-shield-halved mr-1"></i> Data tersimpan di local storage @DediE2026.
+                                    <i className="fa-solid fa-shield-halved mr-1"></i> Data tersimpan di penyimpanan lokal.
                                 </p>
                             </form>
                         </div>
@@ -962,7 +1223,7 @@
                                     </button>
                                 </nav>
 
-                                {/* User profile dropdown info */}
+                                {/* User profile info */}
                                 <div className="flex items-center space-x-3">
                                     <div className="hidden sm:block text-right">
                                         <div className="text-xs font-semibold text-emerald-100 truncate max-w-[160px]">{userName}</div>
@@ -1004,7 +1265,6 @@
                     <main className="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8">
 
                         {/* 1. DASHBOARD TAB */}
-                        {}
                         {activeTab === 'dashboard' && (
                             <div className="space-y-6">
                                 {/* Welcome Banner */}
@@ -1019,7 +1279,7 @@
                                             Selamat Datang, {userName}!
                                         </h2>
                                         <p className="text-emerald-100 mt-2 text-sm sm:text-base leading-relaxed">
-                                            Aplikasi ini dirancang khusus berdasarkan pola kisi-kisi Asesmen Kompetensi Guru dan Tenaga Kependidikan (AKGTK) Rumpun Pengawas Madrasah. Pelajari seluruh reasoning dan pembahasan untuk meningkatkan pemahaman kompetensi pedagogik & profesional Anda.
+                                            Seluruh soal kisi-kisi Asesmen Kompetensi Pengawas Madrasah telah dimuat lengkap ke dalam sistem. Silakan manfaatkan mode latihan interaktif dan simulasi ujian untuk melatih ketajaman *reasoning* Anda.
                                         </p>
 
                                         <div className="mt-6 flex flex-wrap gap-3">
@@ -1048,8 +1308,8 @@
                                             <i className="fa-solid fa-list-ol"></i>
                                         </div>
                                         <div>
-                                            <div className="text-xs font-medium text-slate-500 uppercase tracking-wider">Total Soal Tersedia</div>
-                                            <div className="text-2xl font-extrabold text-slate-800">160 Soal</div>
+                                            <div className="text-xs font-medium text-slate-500 uppercase tracking-wider">Total Soal Aktif</div>
+                                            <div className="text-2xl font-extrabold text-slate-800">{totalQuestionsInBank} Soal</div>
                                             <div className="text-[11px] text-emerald-600 font-medium">4 Bidang Kompetensi</div>
                                         </div>
                                     </div>
@@ -1108,7 +1368,7 @@
                                                             <i className={`fa-solid ${domain.icon}`}></i>
                                                         </div>
                                                         <span className="bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-200">
-                                                            {domain.badge}
+                                                            {domain.questions.length} Soal
                                                         </span>
                                                     </div>
                                                     <h4 className="text-lg font-bold text-slate-800 group-hover:text-emerald-700 transition">
@@ -1179,13 +1439,21 @@
                         )}
 
                         {/* 2. MODE LATIHAN / EXAM INTERFACE */}
-                        {}
                         {(activeTab === 'practice' || activeTab === 'exam') && (
                             <div className="space-y-5 max-w-4xl mx-auto">
                                 {/* Header bar for active test */}
                                 <div className="bg-white rounded-2xl border border-emerald-100 p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
                                     <div className="flex items-center space-x-3 w-full sm:w-auto">
-                                        <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
+                                        <button 
+                                            onClick={() => setActiveTab('dashboard')}
+                                            className="p-2.5 rounded-xl bg-slate-100 hover:bg-emerald-100 hover:text-emerald-800 text-slate-600 transition flex items-center gap-2 text-xs font-semibold shrink-0"
+                                            title="Kembali ke Dashboard"
+                                        >
+                                            <i className="fa-solid fa-arrow-left"></i>
+                                            <span className="hidden sm:inline">Dashboard</span>
+                                        </button>
+
+                                        <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold shrink-0">
                                             <i className={`fa-solid ${QUESTION_BANK[selectedDomain].icon}`}></i>
                                         </div>
                                         <div>
@@ -1227,6 +1495,38 @@
                                     </div>
                                 </div>
 
+                                {/* Summary After Exam Submit */}
+                                {mode === 'exam' && examSubmitted && (
+                                    <div className="bg-gradient-to-r from-emerald-900 to-teal-900 text-white rounded-2xl p-6 shadow-lg border border-emerald-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                        <div className="space-y-1 text-center sm:text-left">
+                                            <div className="inline-flex items-center gap-1.5 bg-emerald-800/80 border border-emerald-500/40 px-3 py-1 rounded-full text-xs font-medium text-emerald-200">
+                                                <i className="fa-solid fa-circle-check text-emerald-400"></i>
+                                                <span>Simulasi Selesai</span>
+                                            </div>
+                                            <h4 className="text-xl font-bold">Hasil Bidang {QUESTION_BANK[selectedDomain].title}</h4>
+                                            <p className="text-xs text-emerald-200">
+                                                Nilai Anda telah dicatat. Silakan pelajari pembahasan detail untuk setiap soal di bawah ini.
+                                            </p>
+                                        </div>
+                                        <div className="flex items-center gap-3 w-full sm:w-auto justify-center shrink-0">
+                                            <button 
+                                                onClick={() => startExamSimulation(selectedDomain)}
+                                                className="px-4 py-2.5 rounded-xl bg-emerald-800 hover:bg-emerald-700 text-white font-semibold text-xs transition border border-emerald-600 flex items-center gap-2"
+                                            >
+                                                <i className="fa-solid fa-rotate-right"></i>
+                                                <span>Ulangi Simulasi</span>
+                                            </button>
+                                            <button 
+                                                onClick={() => setActiveTab('dashboard')}
+                                                className="px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-emerald-950 font-bold text-xs transition shadow-md flex items-center gap-2"
+                                            >
+                                                <i className="fa-solid fa-house"></i>
+                                                <span>Kembali ke Dashboard</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
+
                                 {/* Question Progress Bar */}
                                 <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
                                     <div 
@@ -1244,7 +1544,6 @@
 
                                     return (
                                         <div className="bg-white rounded-2xl border border-emerald-100 shadow-md p-6 sm:p-8 space-y-6">
-                                            {/* Question Text */}
                                             <div>
                                                 <div className="flex items-center justify-between text-xs font-semibold text-slate-400 uppercase mb-2">
                                                     <span>Nomor {currentIndex + 1}</span>
@@ -1258,7 +1557,7 @@
                                             {/* Options List */}
                                             <div className="space-y-3">
                                                 {q.options.map((option, idx) => {
-                                                    const optionLetter = String.fromCharCode(65 + idx); // A, B, C, D, E
+                                                    const optionLetter = String.fromCharCode(65 + idx);
                                                     let btnStyle = "border-slate-200 hover:border-emerald-400 bg-white text-slate-700";
 
                                                     if (mode === 'practice') {
@@ -1270,7 +1569,6 @@
                                                             }
                                                         }
                                                     } else {
-                                                        // Exam Mode
                                                         if (selectedAns === idx) {
                                                             btnStyle = "border-emerald-600 bg-emerald-600 text-white font-semibold shadow-sm";
                                                         }
@@ -1291,7 +1589,7 @@
                                                 })}
                                             </div>
 
-                                            {/* Pembahasan & Reasoning Section (Instant in practice mode, or after exam submit) */}
+                                            {/* Pembahasan Section */}
                                             {((mode === 'practice' && isAnswered) || (mode === 'exam' && examSubmitted)) && (
                                                 <div className={`p-5 rounded-2xl border space-y-2 mt-6 ${isCorrect ? 'bg-emerald-50/80 border-emerald-200 text-emerald-950' : 'bg-amber-50/80 border-amber-200 text-amber-950'}`}>
                                                     <div className="flex items-center space-x-2 font-bold text-sm">
@@ -1311,29 +1609,40 @@
                                                 </div>
                                             )}
 
-                                            {/* Question Pagination Buttons */}
-                                            <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                                            {/* Question Pagination */}
+                                            <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
                                                 <button
                                                     onClick={() => setCurrentIndex(prev => Math.max(0, prev - 1))}
                                                     disabled={currentIndex === 0}
                                                     className="px-4 py-2.5 rounded-xl border border-slate-200 text-slate-600 font-semibold text-xs hover:bg-slate-50 disabled:opacity-40 transition flex items-center space-x-2"
                                                 >
                                                     <i className="fa-solid fa-arrow-left"></i>
-                                                    <span>Sebelumnya</span>
+                                                    <span className="hidden sm:inline">Sebelumnya</span>
                                                 </button>
 
                                                 <div className="text-xs font-semibold text-slate-500">
                                                     {currentIndex + 1} / {QUESTION_BANK[selectedDomain].questions.length}
                                                 </div>
 
-                                                <button
-                                                    onClick={() => setCurrentIndex(prev => Math.min(QUESTION_BANK[selectedDomain].questions.length - 1, prev + 1))}
-                                                    disabled={currentIndex === QUESTION_BANK[selectedDomain].questions.length - 1}
-                                                    className="px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-xs hover:bg-emerald-700 disabled:opacity-40 transition flex items-center space-x-2 shadow-sm"
-                                                >
-                                                    <span>Berikutnya</span>
-                                                    <i className="fa-solid fa-arrow-right"></i>
-                                                </button>
+                                                <div className="flex items-center gap-2">
+                                                    {currentIndex === QUESTION_BANK[selectedDomain].questions.length - 1 ? (
+                                                        <button
+                                                            onClick={() => setActiveTab('dashboard')}
+                                                            className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition flex items-center space-x-2 shadow-sm"
+                                                        >
+                                                            <i className="fa-solid fa-house"></i>
+                                                            <span>Selesai & Kembali</span>
+                                                        </button>
+                                                    ) : (
+                                                        <button
+                                                            onClick={() => setCurrentIndex(prev => Math.min(QUESTION_BANK[selectedDomain].questions.length - 1, prev + 1))}
+                                                            className="px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-semibold text-xs hover:bg-emerald-700 transition flex items-center space-x-2 shadow-sm"
+                                                        >
+                                                            <span>Berikutnya</span>
+                                                            <i className="fa-solid fa-arrow-right"></i>
+                                                        </button>
+                                                    )}
+                                                </div>
                                             </div>
                                         </div>
                                     );
@@ -1342,17 +1651,16 @@
                         )}
 
                         {/* 3. BANK SOAL & PEMBAHASAN CATALOG */}
-                        {}
                         {activeTab === 'catalog' && (
                             <div className="space-y-6">
                                 <div className="bg-white rounded-2xl border border-emerald-100 p-6 shadow-sm">
                                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                                         <div>
-                                            <h3 className="text-xl font-bold text-slate-800">Bank Soal Kunci & Pembahasan</h3>
+                                            <h3 className="text-xl font-bold text-slate-800">Bank Soal Kunci & Pembahasan Lengkap</h3>
                                             <p className="text-xs text-slate-500">Pelajari seluruh argumen dan reasoning resmi untuk persiapan AKGTK 2026</p>
                                         </div>
 
-                                        {/* Filters */}
+                                        {/* Search & Filters */}
                                         <div className="flex flex-col sm:flex-row gap-3">
                                             <div className="relative">
                                                 <i className="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400 text-xs"></i>
@@ -1380,7 +1688,7 @@
                                     </div>
 
                                     {/* Questions Catalog List */}
-                                    <div className="space-y-4">
+                                    <div className="space-y-6">
                                         {Object.values(QUESTION_BANK)
                                             .filter(domain => catalogDomainFilter === 'all' || domain.id === catalogDomainFilter)
                                             .map(domain => {
@@ -1393,9 +1701,12 @@
 
                                                 return (
                                                     <div key={domain.id} className="space-y-3">
-                                                        <div className="bg-emerald-800 text-white px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-between">
-                                                            <span>{domain.title}</span>
-                                                            <span className="bg-emerald-700 px-2 py-0.5 rounded text-[10px]">{filteredQ.length} Soal</span>
+                                                        <div className="bg-emerald-800 text-white px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center justify-between shadow-sm">
+                                                            <div className="flex items-center space-x-2">
+                                                                <i className={`fa-solid ${domain.icon}`}></i>
+                                                                <span>{domain.title}</span>
+                                                            </div>
+                                                            <span className="bg-emerald-700 px-2.5 py-0.5 rounded-full text-[10px]">{filteredQ.length} Soal</span>
                                                         </div>
 
                                                         <div className="space-y-3">
@@ -1445,7 +1756,6 @@
                     </main>
 
                     {/* FOOTER SECTION */}
-                    {}
                     <footer className="bg-emerald-950 text-emerald-200 border-t border-emerald-800 py-6 px-4 text-center text-xs mt-auto no-print">
                         <div className="max-w-7xl mx-auto space-y-2">
                             <p className="font-semibold text-white">Aplikasi Latihan AKGTK 2026 — Rumpun Pengawas Madrasah</p>
