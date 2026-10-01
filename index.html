@@ -4,56 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplikasi Latihan AKGTK 2026 - Rumpun Pengawas Madrasah</title>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <title>Aplikasi Latihan AKGTK 2026</title>
-  <style>
-    /* Style pendukung agar Flipbook tampil rapi dan full-width */
-    .flipbook-container {
-      width: 100%;
-      max-width: 1000px;
-      margin: 20px auto;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Bagian Navigasi / Tab Aplikasi -->
-  <nav>
-    <button onclick="showTab('bank-soal')">Bank Soal Interaktif</button>
-    <button onclick="showTab('flipbook')">Modul Flipbook (PDF)</button>
-  </nav>
-
-  <!-- Konten Tab Bank Soal -->
-  <div id="bank-soal" class="tab-content">
-    <h2>Latihan Soal AKGTK</h2>
-    <!-- Konten soal interaktif di sini -->
-  </div>
-
-  <!-- [PENEMPATAN KODE FLIPHTML5 DI SINI] -->
-  <div id="flipbook" class="tab-content">
-    <h2>Modul & Bank Soal Flipbook Interaktif</h2>
     
-    <div class="flipbook-container">
-      <iframe 
-        src="https://online.fliphtml5.com/llxby/ltik/" 
-        width="100%" 
-        height="600px" 
-        seamless="seamless" 
-        scrolling="no" 
-        frameborder="0" 
-        allowtransparency="true" 
-        allowfullscreen="true">
-      </iframe>
-    </div>
-  </div>
-
-</body>
-</html>    
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -949,6 +900,9 @@
             }
         };
 
+        // Link buku digital FlipHTML5
+        const FLIP_URL = 'https://online.fliphtml5.com/llxby/ltik/';
+
         // Audio Synthesizer (Web Audio API) for sound feedback
         const playSound = (type) => {
             try {
@@ -994,7 +948,7 @@
             const [userMadrasah, setUserMadrasah] = React.useState(() => localStorage.getItem('akgtk_user_madrasah') || '');
             const [isLoggedIn, setIsLoggedIn] = React.useState(() => !!localStorage.getItem('akgtk_user_name'));
 
-            // Navigation state: 'dashboard', 'practice', 'exam', 'catalog'
+            // Navigation state: 'dashboard', 'practice', 'exam', 'catalog', 'fliphtml'
             const [activeTab, setActiveTab] = React.useState('dashboard');
             const [selectedDomain, setSelectedDomain] = React.useState('supervisi_akademik');
             
@@ -1270,6 +1224,13 @@
                                         <i className="fa-solid fa-list-check"></i>
                                         <span>Bank Soal & Pembahasan</span>
                                     </button>
+                                    <button 
+                                        onClick={() => setActiveTab('fliphtml')} 
+                                        className={`px-3 py-2 rounded-lg text-sm font-medium transition flex items-center space-x-2 ${activeTab === 'fliphtml' ? 'bg-emerald-700 text-white font-semibold' : 'text-emerald-100 hover:bg-emerald-800/60'}`}
+                                    >
+                                        <i className="fa-solid fa-book-open-reader"></i>
+                                        <span>Buku Digital</span>
+                                    </button>
                                 </nav>
 
                                 {/* User profile info */}
@@ -1306,6 +1267,10 @@
                             <button onClick={() => setActiveTab('catalog')} className={`p-2 rounded flex flex-col items-center ${activeTab === 'catalog' ? 'text-emerald-300 font-bold' : 'text-emerald-100'}`}>
                                 <i className="fa-solid fa-list-check text-base"></i>
                                 <span>Bank Soal</span>
+                            </button>
+                            <button onClick={() => setActiveTab('fliphtml')} className={`p-2 rounded flex flex-col items-center ${activeTab === 'fliphtml' ? 'text-emerald-300 font-bold' : 'text-emerald-100'}`}>
+                                <i className="fa-solid fa-book-open-reader text-base"></i>
+                                <span>Buku</span>
                             </button>
                         </div>
                     </header>
@@ -1397,6 +1362,26 @@
                                             <div className="text-[11px] text-indigo-600 font-medium">Bookmark Mandiri</div>
                                         </div>
                                     </div>
+                                </div>
+
+                                {/* Kartu Buku Digital */}
+                                <div className="bg-white rounded-2xl border border-emerald-100 hover:border-emerald-300 shadow-sm hover:shadow-md transition p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                    <div className="flex items-center space-x-4">
+                                        <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xl">
+                                            <i className="fa-solid fa-book-open-reader"></i>
+                                        </div>
+                                        <div>
+                                            <h4 className="text-base font-bold text-slate-800">Buku Digital</h4>
+                                            <p className="text-xs text-slate-600">Baca materi pendukung AKGTK dalam bentuk buku flip.</p>
+                                        </div>
+                                    </div>
+                                    <button
+                                        onClick={() => setActiveTab('fliphtml')}
+                                        className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-xl text-xs transition flex items-center gap-2 shadow-sm shadow-emerald-600/30"
+                                    >
+                                        <i className="fa-solid fa-book-open-reader"></i>
+                                        <span>Buka Buku</span>
+                                    </button>
                                 </div>
 
                                 {/* Bidang Soal Selection Grid */}
@@ -1800,6 +1785,50 @@
                                             })}
                                     </div>
                                 </div>
+                            </div>
+                        )}
+
+                        {/* 4. BUKU DIGITAL FLIPHTML5 */}
+                        {activeTab === 'fliphtml' && (
+                            <div className="space-y-4">
+                                <div className="bg-white rounded-2xl border border-emerald-100 p-4 sm:p-5 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+                                    <div className="flex items-center space-x-3 w-full sm:w-auto">
+                                        <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+                                            <i className="fa-solid fa-book-open-reader"></i>
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold text-slate-800 text-base">Buku Digital</h3>
+                                            <p className="text-xs text-slate-500">Baca materi langsung di dalam aplikasi</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-2 w-full sm:w-auto justify-end">
+                                        <a
+                                            href={FLIP_URL}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition flex items-center gap-2 shadow-sm"
+                                        >
+                                            <i className="fa-solid fa-up-right-from-square"></i>
+                                            <span>Buka di Tab Baru</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div className="bg-white rounded-2xl border border-emerald-100 shadow-md overflow-hidden">
+                                    <iframe
+                                        src={FLIP_URL}
+                                        title="Buku Digital FlipHTML5"
+                                        className="w-full border-0"
+                                        style={{ height: '78vh', minHeight: '480px' }}
+                                        allowFullScreen
+                                        allow="fullscreen"
+                                        loading="lazy"
+                                    ></iframe>
+                                </div>
+
+                                <p className="text-xs text-slate-500 text-center">
+                                    Buku tidak tampil? Klik "Buka di Tab Baru".
+                                </p>
                             </div>
                         )}
                     </main>
